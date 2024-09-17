@@ -1,0 +1,139 @@
+.popup-container {
+    padding: 16px;
+    position: absolute;
+    min-height: 200px;
+    min-width: 300px;    
+    background-color: #f0f0e0; /*  #e0e0c0; */
+    border-radius: 4px;
+    color: black;
+    font-size: 12px;
+}
+
+.popup-container .content {
+    display: block;
+    padding-right: 20px;
+}
+
+.popup-container .content .name {
+    font-size: 16px;
+    display: inline-flex;
+    font-weight: bold;
+    margin-bottom: 8px;
+    min-width: 180px;
+    justify-content: center;
+}
+
+.popup-container .content .info {
+    display: table;
+    width: 100%;
+}
+
+.popup-container .content .row {
+    display: grid;
+    margin: 8px 0px;
+    align-items: end;
+    grid-template-columns: 30% 60% 10%;
+    height: 24px;
+}
+
+.popup-container .content .row div:first-child {
+    text-align: right;
+    margin-bottom: 4px;
+    margin-right: 8px;
+    font-weight: 600;
+    color: #333333
+}
+
+.popup-container .content .row div:first-child::after {
+    content: ':';
+}
+
+.popup-container .content .row div:nth-child(2) {
+    text-align: left;
+    margin-bottom: 4px;
+    margin-right: 60px;
+    width: 100%;
+}
+
+.popup-container .content .row div:nth-child(3) {
+    text-align: right;
+    width: fit-content;
+    position: absolute;
+    right: 0px;
+    margin-right: 8px;
+    text-align: center;
+}
+
+.popup-container .content .row input[type=text] {
+    width: 160px;
+    text-align: left;
+    border: none;
+    height: 100%;
+    box-shadow: 1px 2px 2px #aaaaaa;
+}
+
+.popup-container button {
+    height: 28px;
+    border: none;
+    border-radius: 2px;
+    background-color: #eeeeee;
+    box-shadow: 1px 2px 2px #aaaaaa;
+    margin: 0px 20px;
+}
+
+.popup-container .content :not(.name) button {
+    float: inline-end;
+    margin: auto;
+    width: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    margin-bottom: 4px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    font-weight: 900;
+    color: #808080;
+    font-size: 24px;
+}
+
+.popup-container .button button {
+    min-width: 10px;
+    padding: 0px 6px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.popup-container .button.bottom {
+    position: sticky;
+    width: 100%;
+    top: 100%;
+    margin: auto;
+    line-height: 20px;
+    cursor: pointer;
+    max-width: 100px;
+    display: inline;
+}
+
+.popup-container .button.bottom > button {
+    line-height: 20px;
+    width: 100%;
+    max-width: 80px !important;
+    margin: 0px 10px;
+}
+
+.confirmation-popup {
+    position: absolute;
+    top: 30%;
+    left: -20px;
+    background-color:inherit;
+    box-shadow: 2px 2px 2px 2px #666666;
+    border-radius: 4px;
+    width: 340px;
+    padding: 20px;
+    z-index: 100;
+}
+
+.confirmation-popup > div {
+    margin-bottom: 20px;
+}

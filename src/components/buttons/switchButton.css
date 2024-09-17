@@ -1,0 +1,46 @@
+.switch-button-container {
+    display: inline-flex;
+    height: 100%;
+}
+
+.switch-button-container input {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+.switch-button-container label {
+    display: block;
+    width: 60px;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-left: -5px;
+    margin-top: 2px;
+    box-shadow: 1px 2px 2px #aaaaaa;
+}
+
+.switch-button-container label::after {
+    content: attr(data-after-content);
+    font-weight: 700;
+    width: 24px;
+    height: calc(100% - 4px);
+    background-color: #dddddd;
+    position: absolute;
+    border-radius: 2px;
+    top: 2px;
+    left: 2px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch-button-container input:checked + label:after {
+    content: attr(data-before-content);
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}

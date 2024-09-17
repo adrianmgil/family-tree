@@ -1,0 +1,69 @@
+.person {
+    display: inline-flex;
+    vertical-align: top;
+    border: none;
+    margin: 30px 0px;
+}
+
+.person.M {
+    flex-flow: row-reverse;
+}
+
+.person .icon {
+    border-width: 1px;
+    border-style: solid;
+    height: 20px;
+    min-width: 20px;
+    cursor: pointer;
+}
+
+.person.M .icon {
+    border-color: lightblue;
+    background-color: lightblue;
+} 
+.person.F .icon {
+    border-color: pink;
+    background-color: pink;
+}
+
+.person .name {
+    width: 100%;
+    margin-top: 4px;
+    cursor: pointer;
+}
+.person.M .name {
+    text-align: right;
+    margin-right: 3px;
+    margin-left: 6px;
+}
+.person.F .name {
+    text-align: left;
+    margin-left: 3px;
+    margin-right: 6px;
+}
+
+.Box {    
+    position: absolute;
+    height: 56px;
+    margin-top: -60px;
+    color: indianred;
+}
+
+.Box div {
+    height: 50%;
+}
+
+.Box.LeftSide div:first-child {
+    border-right: solid;
+}
+.Box.LeftSide div:last-child {
+    border-left: solid;
+    border-top: solid;
+}
+.Box.RightSide div:first-child {
+    border-left: solid;
+}
+.Box.RightSide div:last-child {
+    border-right: solid;
+    border-top: solid;
+}
